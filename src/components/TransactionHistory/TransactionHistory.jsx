@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import TransactionHistoryTread from 'components/TransactionHistoryTread/TransactionHistoryTread';
 import {
   TransactionTableTh,
@@ -27,3 +29,14 @@ export default function TransactionHistory({ items }) {
     </TransactionTable>
   );
 }
+
+TransactionHistory.propTypes = {
+  items: PropTypes.arrayOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      amount: PropTypes.string.isRequired,
+      currency: PropTypes.string.isRequired,
+      id: PropTypes.string.isRequired,
+    })
+  ),
+};

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+
 import StatisticsItem from 'components/StatisticItem/StatisticItem';
 import {
   StatisticsList,
@@ -24,7 +25,14 @@ const Statistics = ({ title, stats }) => {
 };
 
 export default Statistics;
-// StatisticsItem.propTypes = {
-//   title: PropTypes.string,
-//   stats: PropTypes.arrayOf
-// };
+
+StatisticsItem.propTypes = {
+  title: PropTypes.string,
+  stats: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      label: PropTypes.string.isRequired,
+      percentage: PropTypes.number.isRequired,
+    })
+  ),
+};

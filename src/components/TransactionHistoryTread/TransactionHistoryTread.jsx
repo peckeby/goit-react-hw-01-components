@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 import {
   TransactionTread,
   TransactionTd,
@@ -12,3 +14,9 @@ export default function TransactionHistoryTread({ type, amount, currency }) {
     </TransactionTread>
   );
 }
+
+TransactionHistoryTread.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+};
