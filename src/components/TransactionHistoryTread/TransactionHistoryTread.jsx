@@ -1,8 +1,14 @@
-export default function TransactionHistoryTread({type, amount, currency}) {
-  return(
-  <tr>
-      <td>{type}</td>
-      <td>{amount}</td>
-      <td>{currency}</td>
-  </tr>)
+import {
+  TransactionTread,
+  TransactionTd,
+} from './TransactionHistoryTread.styled';
+
+export default function TransactionHistoryTread({ type, amount, currency }) {
+  return (
+    <TransactionTread>
+      <TransactionTd>{type}</TransactionTd>
+      <TransactionTd>{amount}</TransactionTd>
+      <TransactionTd>{currency}</TransactionTd>
+    </TransactionTread>
+  );
 }

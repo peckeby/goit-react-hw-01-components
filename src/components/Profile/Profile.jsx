@@ -15,13 +15,13 @@ const Profile = ({ username, tag, location, avatar, stats }) => {
         <img
           src={avatar}
           alt="User avatar"
-          class="avatar"
+          className="avatar"
           width="160px"
           height="180px"
         />
         <ProfileName>{username}</ProfileName>
-        <p class="tag">@{tag}</p>
-        <p class="location">{location}</p>
+        <p className="tag">@{tag}</p>
+        <p className="location">{location}</p>
       </ProfileDescription>
       <ProfileStats>
         <ProfileStatsItem>

@@ -1,13 +1,17 @@
 import TransactionHistoryTread from 'components/TransactionHistoryTread/TransactionHistoryTread';
+import {
+  TransactionTableTh,
+  TransactionTable,
+} from './TransactionHistory.styled';
 
 export default function TransactionHistory({ items }) {
   return (
-    <table class="transaction-history">
+    <TransactionTable>
       <thead>
         <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
+          <TransactionTableTh>Type</TransactionTableTh>
+          <TransactionTableTh>Amount</TransactionTableTh>
+          <TransactionTableTh>Currency</TransactionTableTh>
         </tr>
       </thead>
       <tbody>
@@ -20,6 +24,6 @@ export default function TransactionHistory({ items }) {
           ></TransactionHistoryTread>
         ))}
       </tbody>
-    </table>
+    </TransactionTable>
   );
 }
